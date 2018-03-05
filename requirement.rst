@@ -1,0 +1,11 @@
+Pillow>=5.0.0
+cycler>=0.10.0
+matplotlib>=2.1.2
+numpy>=1.14.1
+pycrypto>=2.6.1
+pyparsing>=2.2.0
+six>=1.11.0
+pytz>=2018.3
+subprocess32>=3.2.7
+wheel>=0.30.0
+wsgiref>=0.1.2
