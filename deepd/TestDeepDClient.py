@@ -7,7 +7,7 @@ import json
 
 class TestDeepDClient(unittest.TestCase):
     def testTransform(self):
-        img_file = DATA_DIR + '/test.JPG'
+        img_file = DATA_DIR + '/test.png'
         # 如果输入带有inputs, 设置为True，否则设为False
         is_old_format = True
         config = {'side': 'face'}
@@ -17,6 +17,8 @@ class TestDeepDClient(unittest.TestCase):
         img_base64data = ddc.getImgBase64Str(img_file)
         response = ddc.transform(img_base64data, config, is_old_format)
         response = json.loads((response))
+        print img_file
+        print response
         self.assertEqual(True,response['success'])
 
 if __name__ == '__main__':
