@@ -13,5 +13,8 @@ class Privakable(object):
 
 # p = Privakable()
 # a =  p.encrypt('http://dm-51.data.aliyun.com/rest/160601/ocr/ocr_idcard.json')
+# b =  p.encrypt('24810465')
+# c =  p.encrypt('069121ead09b645dcf8f7a0b9f355439')
 # print a
-# print p.decrypt(a)
+# print b
+# print c

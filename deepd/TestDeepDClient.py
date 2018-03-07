@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from .conf.Config import *
 from .dc.deepd_client import DeepDClient
+from .dc.JDeepdClient import getImgBase64Str
 import unittest
 import json
 
@@ -14,7 +15,7 @@ class TestDeepDClient(unittest.TestCase):
         # 如果没有configure字段，config设为None
         # config = None
         ddc = DeepDClient()
-        img_base64data = ddc.getImgBase64Str(img_file)
+        img_base64data = getImgBase64Str(img_file)
         response = ddc.transform(img_base64data, config, is_old_format)
         response = json.loads((response))
         print img_file

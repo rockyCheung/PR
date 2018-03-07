@@ -42,6 +42,7 @@ def predict(url, app_key, app_secret, img_base64, kv_config, old_format):
                                time_out=6000)
     req_post.set_body(bytearray(source=body, encoding="utf8"))
     req_post.set_content_type(constant.CONTENT_TYPE_STREAM)
+    print "body:",body
     stat, header, content = cli.execute(req_post)
     endTime = time.time()
     print endTime - statTime

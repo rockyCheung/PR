@@ -7,9 +7,9 @@ from deepd.security.Privakable import Privakable
 class DeepDClient(object):
     def __init__(self):
         cryptor = Privakable()
-        self.__key = cryptor.decrypt(getKey())
-        self.__secret = cryptor.decrypt(getSecret())
-        self.__url = cryptor.decrypt(getUrl())
+        self.__key = cryptor.decrypt(getPKey())
+        self.__secret = cryptor.decrypt(getPSecret())
+        self.__url = cryptor.decrypt(getPUrl())
     #如果输入带有inputs, 设置为True，否则设为False
     def transform(self, imgBase64Str, config, format):
         stat, header, content = predict(self.__url, self.__key, self.__secret, imgBase64Str, config,
