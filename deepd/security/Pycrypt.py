@@ -30,3 +30,16 @@ class Pycrypt(object):
         plainText = cryptor.decrypt(base64.decodestring(text))
         plainText = plainText.rstrip('\0')
         return plainText.partition('@')[0]
+
+# from deepd.conf.Config import *
+# import privy
+# # from AES import AES as aa
+# p = Pycrypt()
+# # aes = aa()
+# print p.decrypt(getKey())
+# print p.decrypt(getSecret())#24810465 #069121ead09b645dcf8f7a0b9f355439
+# hidden = privy.hide(b'24810465', SECRET_KEY)
+# print hidden
+# print privy.peek(hidden, SECRET_KEY)
+# print aes.encrypt(bytes('24810465'))
+# print aes.decrypt(getSecret())

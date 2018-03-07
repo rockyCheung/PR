@@ -1,14 +1,29 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+__all__ = [
+    'BASE_DIR',
+    'DATA_DIR',
+    'getKey',
+    'getSecret',
+    'getUrl'
+]
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = BASE_DIR + '/data'
 
 app_conf = {
-    'key':'am2ZYQ7ji39m2TrR6ciVQQ==',
-    'secret':'eY6N/9e4hJGE9Rmnmeld42+Sk/dGLQFi5oY6YcQXqkJyoPZRgeumdMCDfCQhWoim',
-    'url':'http://dm-51.data.aliyun.com/rest/160601/ocr/ocr_idcard.json'
+    'key':'9HrMrxbRHctNP0QhhHEe0lsPo//+E3INGcDGKxbG78gL+vlXkGBH9VER6fa+86FA',
+    'secret':'azktEAjubdJmnaq1mJCP+fmj2ijdNW0hGcbZ0PpRXPJZRvAEMbyQ7r8bm6FLyuAArn75eqLWL2xLvdWh46o8gg==',
+    'url':'Myvve9L/eNX7uheCkWqVLXGbKv3DI1a0jo7uEyxe22UDsoozXtjuD3fK8q47yQeH0aGcLpIYitEqOBKUfpJz3rxz4TtXXf6GRLz/1full0nRUeceotdI1ELKVANvPPUp'
 }
 
 SECRET_KEY = 'sd2dn@ssc$fs16s='
-SALT = 'papa'
+SALT = 'papaasdasdqwdqweqweqwes'
+
+def getKey():
+    return app_conf['key']
+def getSecret():
+    return app_conf['secret']
+def getUrl():
+    return app_conf['url']
